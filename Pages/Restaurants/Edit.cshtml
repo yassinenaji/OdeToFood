@@ -1,25 +1,30 @@
-﻿@page "{RestaurantId:int}"
-@using static OdeToFood.Core.Restaurant
+﻿@page "{RestaurantId:int?}"
 @model OdeToFood.Pages.Restaurants.EditModel
 @{
 }
 
 
-<form>
+<form method="post">
+    <input type="hidden" asp-for="Restaurant.Id" />
   <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
-    <input type="text" class="form-control"  aria-describedby="nameHelp" placeholder="Restaurant name" asp-for="Restaurant.Name">
+    <label asp-for="Restaurant.Name">Name</label>
+    <input type="text" class="form-control" asp-for="Restaurant.Name">
+    <span class="text-danger" asp-validation-for="Restaurant.Name"></span>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Location</label>
-    <input type="text" class="form-control"  placeholder="Restaurant Location" asp-for="Restaurant.Location">
+    <label asp-for="Restaurant.Location">Location</label>
+    <input type="text" class="form-control"   asp-for="Restaurant.Location">
+    <span class="text-danger" asp-validation-for="Restaurant.Location"></span>
+
   </div>
-  <div class="form-group form-check">
-    <select asp-for="Restaurant.Cuisine" asp-items="Html.GetEnumSelectList<CuisineType>()" >
+  <div class="form-group">
+    <label asp-for="Restaurant.Cuisine">Cuisine</label>
+    <select class="form-control" asp-for="Restaurant.Cuisine" asp-items="Model.Cuisines" >
+    <span class="text-danger" asp-validation-for="Restaurant.Cuisine"></span>
 
     </select>    
 
   </div>
-  <button type="submit" class="btn btn-primary">Edit</button>
+  <button type="submit" class="btn btn-primary">Save</button>
 </form>
 <a class="btn btn-primary" asp-page="./List">All Restaurants</a>

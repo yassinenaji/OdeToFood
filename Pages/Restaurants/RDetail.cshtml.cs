@@ -7,16 +7,16 @@ namespace OdeToFood.Pages.Restaurants
 {
     public class RDetailModel : PageModel
     {
-
+        
         public Restaurant Restaurant { get; set; }
-       [BindProperty(SupportsGet = true)]
+        [BindProperty(SupportsGet = true)]
         public int RestaurantId { get; set; }
         private readonly IRestaurantData restaurantData;
         public RDetailModel(IRestaurantData restaurantData)
         {
             this.restaurantData = restaurantData;
         }
-        public IActionResult OnGet(/*int restaurantId*/)
+        public IActionResult OnGet(/*int RestaurantId*/)
         {
             Restaurant = new Restaurant();
             Restaurant = restaurantData.GetById(RestaurantId);
@@ -26,5 +26,7 @@ namespace OdeToFood.Pages.Restaurants
             }
             return Page();
         }
+
+        
     }
 }

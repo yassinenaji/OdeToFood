@@ -57,7 +57,7 @@
              <a   class="btn btn-lg" asp-page="./RDetail" asp-route-RestaurantId="@item.Id">  
               <i class="glyphicon glyphicon-zoom-in"></i> </a>
              <a   class="btn btn-lg" asp-page="./Edit" asp-route-RestaurantId="@item.Id">  
-              <i class="glyphicon glyphicon-pencil"></i> </a>
+              <i class="glyphicon glyphicon-edit"></i> </a>
              <a   class="btn btn-lg" asp-page="./Delete" asp-route-RestaurantId="@item.Id">  
               <i class="glyphicon glyphicon-remove"></i> </a>
         </td>
@@ -67,6 +67,9 @@
     }
     
     </table>
+
+    <a class="btn btn-primary" asp-page="./Edit">Add New</a>
+
 
     <p>hello from @Model.MessageConfig</p>
 
