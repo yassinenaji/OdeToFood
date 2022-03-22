@@ -36,7 +36,7 @@
                 Cuisine
             </th>
                <th>
-                Details
+                Actions
             </th>
         </tr>
     @foreach (var item in Model.Restaurants)
@@ -54,9 +54,12 @@
             @item.Cuisine
         </td>
         <td>
-             <a asp-page="./Detail" asp-route-RestaurantId="@item.Id" class="btn btn-lg">  
+             <a   class="btn btn-lg" asp-page="./RDetail" asp-route-RestaurantId="@item.Id">  
               <i class="glyphicon glyphicon-zoom-in"></i> </a>
+              <a   class="btn btn-lg" asp-page="./Edit" asp-route-RestaurantId="@item.Id">  
+              <i class="glyphicon glyphicon-pencil"></i> </a>
         </td>
+   
         
         </tr>
     }

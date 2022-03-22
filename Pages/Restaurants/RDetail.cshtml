@@ -1,8 +1,8 @@
 ﻿@page "{RestaurantId:int}"
-@model OdeToFood.Pages.Restaurants.DetailModel
+@model OdeToFood.Pages.Restaurants.RDetailModel
 @{
-    ViewData["Title"]="Detail";
 }
+
 
 <h2>@Model.Restaurant.Name</h2>
 
@@ -10,4 +10,4 @@
 <div>Location: @Model.Restaurant.Location</div>
 <div>Cuisine: @Model.Restaurant.Cuisine</div>
 
-<a asp-page="./List" class="btn btn-primary">Return to list</a>
+<a class="btn btn-primary" asp-page="./List">All Restaurants</a>

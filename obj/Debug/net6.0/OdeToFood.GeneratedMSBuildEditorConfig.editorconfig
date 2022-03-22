@@ -27,8 +27,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/5iir/Stage PFE/formation pluralsight.net core/OdeToFood/Pages/Restaurants/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdGF1cmFudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/5iir/Stage PFE/formation pluralsight.net core/OdeToFood/Pages/Restaurants/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdGF1cmFudHNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5iir/Stage PFE/formation pluralsight.net core/OdeToFood/Pages/Restaurants/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdGF1cmFudHNcTm90Rm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/5iir/Stage PFE/formation pluralsight.net core/OdeToFood/Pages/Restaurants/RDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdGF1cmFudHNcUkRldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/5iir/Stage PFE/formation pluralsight.net core/OdeToFood/Pages/Shared/_ValidationScriptsPartial.cshtml]

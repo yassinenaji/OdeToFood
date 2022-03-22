@@ -5,20 +5,26 @@ using OdeToFood.Data;
 
 namespace OdeToFood.Pages.Restaurants
 {
-    public class DetailModel : PageModel
+    public class RDetailModel : PageModel
     {
+
         public Restaurant Restaurant { get; set; }
-        [BindProperty(SupportsGet = true)]
+       [BindProperty(SupportsGet = true)]
         public int RestaurantId { get; set; }
         private readonly IRestaurantData restaurantData;
-        public DetailModel(IRestaurantData restaurantData)
+        public RDetailModel(IRestaurantData restaurantData)
         {
             this.restaurantData = restaurantData;
         }
-        public void OnGet()
+        public IActionResult OnGet(/*int restaurantId*/)
         {
             Restaurant = new Restaurant();
             Restaurant = restaurantData.GetById(RestaurantId);
+            if(Restaurant== null)
+            {
+                return RedirectToPage("./NotFound");
+            }
+            return Page();
         }
     }
 }

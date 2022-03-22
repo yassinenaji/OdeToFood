@@ -7,28 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\Restaurants\Detail.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\OdeToFood.Core\OdeToFood.Core.csproj" />
     <ProjectReference Include="..\OdeToFood.Data\OdeToFood.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\Restaurants\Detail.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\Restaurants\Detail.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\Restaurants\Detail.cshtml" />
   </ItemGroup>
 
 </Project>
