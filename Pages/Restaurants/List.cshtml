@@ -7,10 +7,9 @@
 <h1>@Model.Message</h1>
 
 <form method="get">
-
     <div class="form-group">
         <div class="input-group">
-            <input type="search" class="form-control" value="" />
+            <input type="search" class="form-control" asp-for="SearchTerm"/>
             <span class="input-group-btn">
                 <button class="btn btn-default">
                     <i class="glyphicon glyphicon-search"></i>
@@ -21,8 +20,6 @@
         </div>
 
     </div>
-
-
 </form>
 <div>
     <table class="table">
@@ -38,12 +35,15 @@
                <th>
                 Cuisine
             </th>
+               <th>
+                Details
+            </th>
         </tr>
     @foreach (var item in Model.Restaurants)
     {
          <tr>
         <td>
-            @item.Name
+          <a asp-page="./Detail" asp-route-RestaurantId="@item.Id" class="btn btn-lg">  <i class="glyphicon glyphicon-zoom-in"></i> </a>
         </td>
         
         <td>
@@ -53,10 +53,13 @@
         <td>
             @item.Cuisine
         </td>
+        
         </tr>
     }
     
     </table>
+
+    <p>hello from @Model.MessageConfig</p>
 
 </div>
 

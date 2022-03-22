@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HWWWyONlpduaRbAcATSsUWcsmfh7wzzdBNmyremAJp8=",
+  "Hash": "aqzdQF54Kg7OS859BCiAvXnAE6TUyguuGpuWMbUFt04=",
   "Source": "OdeToFood",
   "BasePath": "_content/OdeToFood",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\5iir\\Stage PFE\\formation pluralsight.net core\\OdeToFood\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\OdeToFood.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\5iir\\Stage PFE\\formation pluralsight.net core\\OdeToFood\\wwwroot\\css\\newglyphicon.css",
+      "SourceId": "OdeToFood",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\5iir\\Stage PFE\\formation pluralsight.net core\\OdeToFood\\wwwroot\\",
+      "BasePath": "_content/OdeToFood",
+      "RelativePath": "css/newglyphicon.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\newglyphicon.css"
     },
     {
       "Identity": "D:\\5iir\\Stage PFE\\formation pluralsight.net core\\OdeToFood\\wwwroot\\css\\site.css",
