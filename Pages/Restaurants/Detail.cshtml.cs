@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using OdeToFood.Core;
+using OdeToFood.Data;
 
 namespace OdeToFood.Pages.Restaurants
 {
@@ -9,10 +10,15 @@ namespace OdeToFood.Pages.Restaurants
         public Restaurant Restaurant { get; set; }
         [BindProperty(SupportsGet = true)]
         public int RestaurantId { get; set; }
+        private readonly IRestaurantData restaurantData;
+        public DetailModel(IRestaurantData restaurantData)
+        {
+            this.restaurantData = restaurantData;
+        }
         public void OnGet()
         {
-            Restaurant=new Restaurant();
-            Restaurant.Id = RestaurantId;
+            Restaurant = new Restaurant();
+            Restaurant = restaurantData.GetById(RestaurantId);
         }
     }
 }

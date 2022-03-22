@@ -43,7 +43,7 @@
     {
          <tr>
         <td>
-          <a asp-page="./Detail" asp-route-RestaurantId="@item.Id" class="btn btn-lg">  <i class="glyphicon glyphicon-zoom-in"></i> </a>
+         @item.Name
         </td>
         
         <td>
@@ -52,6 +52,10 @@
         
         <td>
             @item.Cuisine
+        </td>
+        <td>
+             <a asp-page="./Detail" asp-route-RestaurantId="@item.Id" class="btn btn-lg">  
+              <i class="glyphicon glyphicon-zoom-in"></i> </a>
         </td>
         
         </tr>
