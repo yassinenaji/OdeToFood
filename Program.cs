@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton<IRestaurantData, InMemoryRestaurantDataImp>();
+builder.Services.AddScoped<IRestaurantData, SqlRestauraantData>();
 builder.Services.AddDbContextPool<OdeToFoodDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("OdeToFoodDb"));

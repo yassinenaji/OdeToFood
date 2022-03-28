@@ -61,8 +61,8 @@ namespace OdeToFood.Pages.Restaurants
             }
             else
             {
-               /* restaurantData.Add(Restaurant);
-                TempData["Message"] = "Create Action";*/
+                restaurantData.Add(Restaurant);
+                TempData["Message"] = "Create Action";
 
 
             }
