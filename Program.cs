@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using OdeToFood.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IRestaurantData, InMemoryRestaurantDataImp>();
-
+builder.Services.AddDbContextPool<OdeToFoodDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("OdeToFoodDb"));
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

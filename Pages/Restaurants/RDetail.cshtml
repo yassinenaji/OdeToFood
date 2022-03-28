@@ -4,10 +4,15 @@
 }
 
 
+
 <h2>@Model.Restaurant.Name</h2>
 
 <div>Id: @Model.Restaurant.Id</div>
 <div>Location: @Model.Restaurant.Location</div>
 <div>Cuisine: @Model.Restaurant.Cuisine</div>
 
+@if (TempData["Message"]!=null)
+{
+    <div class="alert alert-info">@TempData["Message"]</div>
+}
 <a class="btn btn-primary" asp-page="./List">All Restaurants</a>

@@ -15,6 +15,8 @@ namespace OdeToFood.Pages.Restaurants
         public int RestaurantId { get; set; }
         public IEnumerable<SelectListItem> Cuisines { get; set; }   
       
+        [TempData]
+        public string Message { get; set; }
 
         private readonly IRestaurantData restaurantData;
         private readonly IHtmlHelper htmlHelper;
@@ -54,16 +56,18 @@ namespace OdeToFood.Pages.Restaurants
             if (Restaurant.Id > 0)
             {
                 restaurantData.Update(Restaurant);
+                TempData["Message"] = "Update Action";
 
             }
             else
             {
-                restaurantData.Add(Restaurant);
-              
+               /* restaurantData.Add(Restaurant);
+                TempData["Message"] = "Create Action";*/
+
 
             }
             restaurantData.commit();
-            return RedirectToPage("./RDetail", new { RestaurantId = Restaurant.Id });
+            return RedirectToPage("./RDetail", new { RestaurantId = Restaurant.Id});
         }
     }
 }
