@@ -11,8 +11,8 @@
 <div>Location: @Model.Restaurant.Location</div>
 <div>Cuisine: @Model.Restaurant.Cuisine</div>
 
-@if (TempData["Message"]!=null)
+@if (TempData["commit"]!=null)
 {
-    <div class="alert alert-info">@TempData["Message"]</div>
+    <div class="alert alert-info">@TempData["commit"]</div>
 }
 <a class="btn btn-primary" asp-page="./List">All Restaurants</a>

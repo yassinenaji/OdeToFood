@@ -11,8 +11,8 @@ namespace OdeToFood.Pages.Restaurants
     {
         [BindProperty]
         public Restaurant Restaurant { get; set; }
-        [BindProperty(SupportsGet =true)]
-        public int RestaurantId { get; set; }
+        /*[BindProperty(SupportsGet =true)]
+        public int RestaurantId { get; set; }*/
         public IEnumerable<SelectListItem> Cuisines { get; set; }   
       
         [TempData]
@@ -25,12 +25,12 @@ namespace OdeToFood.Pages.Restaurants
             this.restaurantData = restaurantData;
             this.htmlHelper = htmlHelper;   
         }
-        public IActionResult OnGet(/*int restaurantId*/)
+        public IActionResult OnGet(int? RestaurantId)
         {
             Cuisines = htmlHelper.GetEnumSelectList<CuisineType>();
-            if (RestaurantId != null)
+            if (RestaurantId.HasValue)
             {
-                Restaurant = restaurantData.GetById(RestaurantId);
+                Restaurant = restaurantData.GetById(RestaurantId.Value);
 
             }
             else
@@ -38,10 +38,10 @@ namespace OdeToFood.Pages.Restaurants
                 Restaurant = new Restaurant();
           
             }
-            /*if (Restaurant == null)
+            if (Restaurant == null)
             {
                 return RedirectToPage("./NotFound");
-            }*/
+            }
             return Page();
         }
         public IActionResult Onpost()
@@ -66,7 +66,7 @@ namespace OdeToFood.Pages.Restaurants
 
 
             }
-            restaurantData.commit();
+            TempData["commit"]= restaurantData.commit();
             return RedirectToPage("./RDetail", new { RestaurantId = Restaurant.Id});
         }
     }
